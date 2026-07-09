@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+*{
+  font-family: "Outfit", sans-serif;
+ }
+@import "tailwindcss";
+
+.input-field {
+  @apply p-2 border rounded-lg bg-white shadow-sm 
+         focus:ring-2 focus:ring-[#0A1C4F] focus:outline-none;
+}
+
+.textarea-field {
+  @apply p-3 border rounded-lg bg-white shadow-sm 
+         focus:ring-2 focus:ring-[#0A1C4F] focus:outline-none;
+}
+
+/* Hide month/year dropdowns */
+
+/* Make calendar look like MUI style */
+.rdrCalendarWrapper {
+  border-radius: 16px !important;
+  background: #ffffff !important;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08) !important;
+  font-family: "Inter", sans-serif !important;
+}
+
+.rdrDateDisplayWrapper {
+  display: none !important;
+}
+
+.rdrMonthAndYearPickers select {
+  background: transparent !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+}
+
+.rdrDayToday .rdrDayNumber span:after {
+  background: #003566 !important;
+}
+
+.rdrDayHovered {
+  border-radius: 8px !important;
+}
+
+.rdrSelected {
+  background: #003566 !important;
+  color: #fff !important;
+  border-radius: 8px !important;
+}
+
+.rdrDefinedRangesWrapper {
+  display: none !important;
+}
+
+.rdrMonth {
+  padding: 1rem !important;
+}
+
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+/* === Custom Calendar Theme === */
+.custom-calendar-theme {
+  background-color: #111 !important;
+  color: #fff !important;
+  border-radius: 1rem;
+  padding: 0.75rem;
+}
+
+.custom-calendar-theme .rdrMonthAndYearPickers select {
+  background-color: #222 !important;
+  color: #fff !important;
+  border: none;
+}
+
+.custom-calendar-theme .rdrMonthName,
+.custom-calendar-theme .rdrWeekDay {
+  color: #ccc !important;
+}
+
+.custom-calendar-theme .rdrDayNumber span {
+  color: #eee !important;
+}
+
+.custom-calendar-theme .rdrDayDisabled {
+  opacity: 0.3 !important;
+}
+
+.custom-calendar-theme .rdrSelected,
+.custom-calendar-theme .rdrInRange,
+.custom-calendar-theme .rdrStartEdge,
+.custom-calendar-theme .rdrEndEdge {
+  background-color: #2563eb !important;
+  color: white !important;
+}
+
+.custom-calendar-theme .rdrDayToday .rdrDayNumber span {
+  border: 1px solid #2563eb !important;
+  border-radius: 50%;
+}
+
+.custom-calendar-theme .rdrDayHovered {
+  background-color: rgba(37, 99, 235, 0.2) !important;
+}
+
+.custom-calendar-theme .rdrMonth {
+  background-color: #111 !important;
+}
+
+.custom-calendar-theme .rdrDays {
+  border-top: 1px solid #222;
+  border-bottom: 1px solid #222;
+}
+
+.custom-calendar-theme .rdrDateDisplayWrapper {
+  display: none !important;
+}
+
+/* Hide scrollbar for Chrome, Safari, Edge */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.scrollbar-none {
+  scrollbar-width: none;
+}
+.body-lock {
+  overflow: hidden;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.2s ease-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.25s ease-out;
+}
+@keyframes popupSlide {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fadeInOverlay {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-popupSlide {
+  animation: popupSlide 0.25s ease-out;
+}
+
+.animate-fadeInOverlay {
+  animation: fadeInOverlay 0.2s ease-out;
+}
+@keyframes popupScale {
+  from {
+    opacity: 0;
+    transform: scale(0.92) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes fadeInOverlay {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-popupScale {
+  animation: popupScale 0.25s ease-out;
+}
+
+.animate-fadeInOverlay {
+  animation: fadeInOverlay 0.2s ease-out;
+}
+@keyframes dropdown {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-dropdown {
+  animation: dropdown 0.18s ease-out;
+}
+.input {
+  @apply w-full p-2 border rounded-md bg-white shadow-sm;
+}
+.textarea {
+  @apply w-full p-3 border rounded-md bg-white shadow-sm;
+}
+.btn-add {
+  @apply px-3 py-2 bg-[#003566]/10 border border-[#003566] text-[#003566] rounded-lg hover:bg-[#003566]/20 transition;
+}
+.tag {
+  @apply px-3 py-1 rounded-full border cursor-pointer text-sm bg-gray-100 border-gray-300 text-gray-600;
+}
+.tag-active {
+  @apply bg-[#00A650]/10 border-[#00A650] text-[#00A650];
+}
+.room-card {
+  @apply p-4 rounded-xl border border-gray-200 bg-white shadow-sm;
+}
+.btn-submit {
+  @apply px-6 py-2 bg-[#003566] text-white rounded-lg shadow hover:bg-[#00284f] transition;
+}
+
+.custom-input {
+  @apply p-3 border border-[#f5cc00] rounded-md w-full outline-none focus:ring focus:ring-[#f5cc00];
+}
+.custom-section{
+  @apply bg-white shadow-md rounded-xl border border-[#f5cc00]
+}
+.navbar-li{
+  @apply px-4 py-2 hover:bg-blue-100 rounded-md cursor-pointer
+}
+.filter-heading{
+  @apply text-sm font-medium text-[#003566] 
+}
